@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAGS -->
+    <title>MizraimPhoenix - Gaming & Streaming</title>
+    <meta name="description" content="Official website of MizraimPhoenix - Gaming content creator streaming on Twitch & YouTube. Watch gameplay, highlights, and more.">
+    <meta name="keywords" content="gaming, streaming, twitch, youtube, callofduty, blackops, warzone, mizraimphoenix">
+    <meta name="author" content="MizraimPhoenix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH / SOCIAL MEDIA -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MizraimPhoenix - Gaming & Streaming">
+    <meta property="og:description" content="Official website of MizraimPhoenix - Gaming content creator streaming on Twitch & YouTube.">
+    <meta property="og:image" content="images/canva_M.png">
+    <meta property="og:url" content="https://greyph4ntom.github.io/">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MizraimPhoenix - Gaming & Streaming">
+    <meta name="twitter:description" content="Official website of MizraimPhoenix - Gaming content creator streaming on Twitch & YouTube.">
+    <meta name="twitter:image" content="images/canva_M.png">
+    
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="canonical" href="https://greyph4ntom.github.io/">
+    
+    <!-- GOOGLE FONTS WITH PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <base target="_blank">
+</head>
+<body>
+    <!-- ============================================
+         SVG BACKGROUND PATTERN
+         ============================================ -->
+    <svg class="svg-background" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+            <pattern id="x-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <!-- X marks -->
+                <path d="M20 20 L30 30 M30 20 L20 30" stroke="#C9B896" stroke-width="1" opacity="0.3"/>
+                <path d="M70 70 L80 80 M80 70 L70 80" stroke="#C9B896" stroke-width="1" opacity="0.3"/>
+                <!-- Dots -->
+                <circle cx="50" cy="50" r="1.5" fill="#C9B896" opacity="0.2"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#x-pattern)" />
+
+        <!-- Large decorative X's -->
+        <path d="M200 200 L250 250 M250 200 L200 250" stroke="#C9B896" stroke-width="2" opacity="0.1"/>
+        <path d="M1600 800 L1700 900 M1700 800 L1600 900" stroke="#C9B896" stroke-width="2" opacity="0.1"/>
+        <path d="M1700 300 L1750 350 M1750 300 L1700 350" stroke="#C9B896" stroke-width="1.5" opacity="0.15"/>
+    </svg>
+
+    <!-- BACKGROUND LAYER -->
+    <div class="background-layer" aria-hidden="true"></div>
+
+    <!-- ============================================
+         NAVIGATION MENU
+         ============================================ -->
+    <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+        <div class="nav-content">
+            <div class="logo-section">
+                <img src="images/canva_M.png" alt="MizraimPhoenix Logo" class="logo-img" style="width: 50px; height: 50px; object-fit: contain;">
+                <span class="logo-text">Mizraim<span class="highlight">Phoenix</span></span>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" class="active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#games" role="menuitem">Games</a></li>
+                <li role="none"><a href="#accessories" role="menuitem">Accessories</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - STREAM & VIDEO
+         ============================================ -->
+    <main>
+    <section class="hero-section" id="home" aria-label="Featured content">
+        <div class="windows-container">
+
+            <!-- YOUTUBE VIDEO WINDOW -->
+            <a href="https://youtube.com/@MizraimPhoenix2" target="_blank" class="window-card youtube-card" id="youtubeWindow" aria-label="Watch latest video on YouTube">
+                <div class="window-header">
+                    <div class="window-avatar" role="img" aria-label="Channel avatar"></div>
+                    <div class="window-info">
+                        <h3 id="youtubeTitle">Latest Video</h3>
+                        <span id="youtubeChannel">MizraimPhoenix2</span>
+                    </div>
+                </div>
+
+                <div class="window-content" style="position: relative;">
+                    <!-- YOUTUBE THUMBNAIL - Update VIDEO_ID with your actual video ID -->
+                    <img
+                        id="youtubeThumbnail"
+                        src="https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg"
+                        alt="Latest YouTube video thumbnail"
+                        loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                        onerror="this.src='https://via.placeholder.com/1280x720/1a1a1a/fceba2?text=Latest+Video'"
+                    >
+
+                    <!-- PLAY BUTTON OVERLAY -->
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;" aria-hidden="true">
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="platform-badge youtube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        Watch on YouTube
+                    </div>
+                </div>
+
+                <div class="window-footer">
+                    <div class="live-indicator">
+                        <span style="color: var(--text-secondary);">Latest Upload</span>
+                    </div>
+                    <span style="color: var(--brand-gold); font-weight: 600;">YouTube →</span>
+                </div>
+            </a>
+
+            <!-- TWITCH STREAM WINDOW -->
+            <div class="window-card twitch-card" id="twitchWindow" tabindex="0" aria-label="Twitch stream">
+                <div class="window-header">
+                    <div class="window-avatar" role="img" aria-label="Streamer avatar"></div>
+                    <div class="window-info">
+                        <h3 id="twitchTitle">Live Now</h3>
+                        <span id="twitchStatus">Loading stream...</span>
+                    </div>
+                </div>
+
+                <div class="window-content" id="twitchContent" style="position: relative;">
+                    <!-- TWITCH PLAYER CONTAINER -->
+                    <div id="twitch-embed" style="width: 100%; height: 100%;" aria-label="Twitch stream player"></div>
+
+                    <!-- OFFLINE OVERLAY (shown when not live) -->
+                    <div id="twitchOffline" class="video-placeholder" style="background: linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 100%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; z-index: 10;">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="#9146FF" opacity="0.8" aria-hidden="true">
+                            <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                        </svg>
+                        <span style="color: var(--text-secondary); font-size: 1.2rem;">Currently Offline</span>
+                    </div>
+
+                    <div class="platform-badge twitch">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                        </svg>
+                        twitch
+                    </div>
+                </div>
+
+                <div class="window-footer">
+                    <div class="live-indicator" id="twitchLiveIndicator" aria-live="polite">
+                        <span class="live-dot" aria-hidden="true"></span>
+                        <span id="twitchLiveText">Live</span>
+                    </div>
+                    <a href="https://twitch.tv/mizraimphoenix2" target="_blank" style="color: var(--brand-gold); font-weight: 600; text-decoration: none;">
+                        <span id="twitchLinkText">Watch on Twitch →</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TWITCH EMBED SCRIPT -->
+            <script src="https://player.twitch.tv/js/embed/v1.js" async></script>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         SHOP SECTION - GAMES & ACCESSORIES
+         ============================================ -->
+    <section class="shop-section" id="shop" aria-label="Browse games and accessories">
+        <div class="section-header">
+            <span class="section-label">Browse</span>
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="Content categories">
+            <button class="tab-btn active" data-category="games" role="tab" aria-selected="true" aria-controls="gamesCarousel">Games</button>
+            <button class="tab-btn" data-category="accessories" role="tab" aria-selected="false" aria-controls="accessoriesCarousel">Accessories</button>
+        </div>
+
+        <!-- GAMES CAROUSEL -->
+        <div class="carousel-container" id="gamesCarousel" role="tabpanel" aria-labelledby="games-tab">
+            <button class="carousel-btn prev" onclick="moveCarousel('games', -1)" aria-label="Previous game">‹</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="gamesTrack" role="list">
+                    <!-- CARD 1 -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">Black ops 7</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/Black-ops-7-cover.webp');" role="img" aria-label="Black Ops 7 game cover"></div>
+                    </div>
+                    <!-- CARD 2 -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">black ops 6</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/Black-ops-6-cover.webp');" role="img" aria-label="Black Ops 6 game cover"></div>
+                    </div>
+                    <!-- CARD 3 -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">warzone</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/Bo7-warzone.jpg');" role="img" aria-label="Warzone game cover"></div>
+                    </div>
+                    <!-- CARD 4 -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">Gr:breakpoint</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/GR-Brealpoint.jpg');" role="img" aria-label="Ghost Recon Breakpoint game cover"></div>
+                    </div>
+                    <!-- CARD 5 - GTA VI with placeholder -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">gta vi</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/gta-vi-placeholder.svg');" role="img" aria-label="GTA VI coming soon"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel('games', 1)" aria-label="Next game">›</button>
+            <div class="scroll-indicator" id="gamesIndicators" aria-label="Games carousel indicators"></div>
+        </div>
+
+        <!-- ACCESSORIES CAROUSEL -->
+        <div class="carousel-container hidden" id="accessoriesCarousel" role="tabpanel" aria-labelledby="accessories-tab">
+            <button class="carousel-btn prev" onclick="moveCarousel('accessories', -1)" aria-label="Previous accessory">‹</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="accessoriesTrack" role="list">
+                    <!-- CARD 1 - Monitor -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">monitore</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/monitor-placeholder.svg');" role="img" aria-label="Gaming monitor"></div>
+                    </div>
+                    <!-- CARD 2 - Stream Deck -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">stream deck</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/streamdeck-placeholder.svg');" role="img" aria-label="Stream Deck controller"></div>
+                    </div>
+                    <!-- CARD 3 - Mixer & Mic -->
+                    <div class="product-card" role="listitem">
+                        <div class="product-header">
+                            <h4 class="product-title">mixer & mic</h4>
+                        </div>
+                        <div class="product-image" style="background-image: url('images/mixer-mic-placeholder.svg');" role="img" aria-label="Audio mixer and microphone"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel('accessories', 1)" aria-label="Next accessory">›</button>
+            <div class="scroll-indicator" id="accessoriesIndicators" aria-label="Accessories carousel indicators"></div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER - SOCIAL LINKS
+         ============================================ -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="footer-content">
+            <div class="social-links" aria-label="Social media links">
+                <!-- DISCORD -->
+                <a href="https://discord.gg/yourserver" target="_blank" class="social-link discord" aria-label="Join our Discord server">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                </a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://instagram.com/mizraimphoenix" target="_blank" class="social-link instagram" aria-label="Follow on Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                </a>
+
+                <!-- YOUTUBE -->
+                <a href="https://youtube.com/@MizraimPhoenix2" target="_blank" class="social-link youtube" aria-label="Subscribe on YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+
+                <!-- TWITCH -->
+                <a href="https://twitch.tv/mizraimphoenix2" target="_blank" class="social-link twitch" aria-label="Follow on Twitch">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                    </svg>
+                </a>
+
+                <!-- TIKTOK -->
+                <a href="https://tiktok.com/@mizraim.phoenix" target="_blank" class="social-link tiktok" aria-label="Follow on TikTok">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                    </svg>
+                </a>
+
+                <!-- SPOTIFY -->
+                <a href="https://open.spotify.com/user/yourprofile" target="_blank" class="social-link spotify" aria-label="Listen on Spotify">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <span aria-hidden="true">•</span>
+                <a href="#terms">Terms of Service</a>
+                <span aria-hidden="true">•</span>
+                <a href="#socials">Socials</a>
+            </div>
+
+            <div class="copyright" style="margin-top: 2rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <p>&copy; <span id="currentYear">2026</span> MizraimPhoenix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+</body>
+</html>

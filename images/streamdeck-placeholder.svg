@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  <!-- Stream Deck body -->
+  <rect x="80" y="100" width="240" height="180" rx="12" fill="#2a2a2a" stroke="#fceba2" stroke-width="2"/>
+  <!-- Grid of buttons (3x5) -->
+  <g fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1">
+    <rect x="95" y="115" width="55" height="40" rx="4"/>
+    <rect x="172" y="115" width="55" height="40" rx="4"/>
+    <rect x="249" y="115" width="55" height="40" rx="4"/>
+    <rect x="95" y="170" width="55" height="40" rx="4"/>
+    <rect x="172" y="170" width="55" height="40" rx="4"/>
+    <rect x="249" y="170" width="55" height="40" rx="4"/>
+    <rect x="95" y="225" width="55" height="40" rx="4"/>
+    <rect x="172" y="225" width="55" height="40" rx="4"/>
+    <rect x="249" y="225" width="55" height="40" rx="4"/>
+  </g>
+  <!-- Button icons (simplified) -->
+  <g fill="#fceba2" opacity="0.6">
+    <circle cx="122" cy="135" r="8"/>
+    <circle cx="199" cy="135" r="8"/>
+    <circle cx="276" cy="135" r="8"/>
+    <circle cx="122" cy="190" r="8"/>
+    <circle cx="199" cy="190" r="8"/>
+    <circle cx="276" cy="190" r="8"/>
+    <circle cx="122" cy="245" r="8"/>
+    <circle cx="199" cy="245" r="8"/>
+    <circle cx="276" cy="245" r="8"/>
+  </g>
+  <!-- USB cable -->
+  <rect x="195" y="280" width="10" height="30" fill="#3a3a3a"/>
+  <!-- Label -->
+  <text x="200" y="360" font-family="Orbitron, sans-serif" font-size="18" font-weight="700" fill="#fceba2" text-anchor="middle" letter-spacing="2">STREAM DECK</text>
+</svg>
